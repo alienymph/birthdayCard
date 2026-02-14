@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'SpongeBob';
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, #00e0ff 0%, #0099cc 40%, #006699 100%);
+}
+
+/* Arena abajo */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'SpongeBob', cursive;
+    text-align: center;
+    color: white;
+
+    /* Fondo radial amarillo tipo fiesta */
+    background: radial-gradient(circle at center, #ffe600 0%, #ffcc00 40%, #ff9900 100%);
+}
+
+button {
+    font-family: 'SpongeBob', cursive !important;
+}
+
+/* Flores estilo caricatura */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(#ff4dd2 8%, transparent 9%),
+        radial-gradient(#8e44ff 8%, transparent 9%),
+        radial-gradient(#ff1a1a 8%, transparent 9%);
+    background-size: 200px 200px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+/* Burbujas */
+.ocean {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: rise 8s infinite ease-in;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Tarjeta central */
+.card {
+    position: relative;
+    top: 25vh;
+    z-index: 10;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow:
+        4px 4px 0px #0011ff,
+        8px 8px 0px #ffcc00;
+    animation: bounce 1s infinite alternate;
+}
+
+.subtitle {
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-shadow: 3px 3px #ff47a3;
+    margin-bottom: 30px;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
+}
+
+button {
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50px;
+    background: #f04399;
+    color: white;
+    cursor: pointer;
+    font-family: 'SpongeBob';
+    box-shadow: 0 0 20px #ee31bf;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px yellow;
+}
+
+@font-face {
+    font-family: 'SpongeBob';
+    src: url('./fonts/spongebob.ttf') format('truetype');
+}
+/* Burbujas */
+.ocean {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    animation: rise 8s infinite ease-in;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+
+/* Pantalla inicial */
+/* Overlay pantalla completa */
+#overlay {
+    position: fixed;        /* importante: fixed, no absolute */
+    inset: 0;               /* cubre toda la pantalla */
+    background: radial-gradient(circle at center, #ff007f, #8e44ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    cursor: pointer;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+/* Cortinas */
+.cortina {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8e44ff, #ff007f);
+    transition: transform 1.5s ease;
+}
+
+/* Lado izquierdo */
+.izquierda {
+    left: 0;
+}
+
+/* Lado derecho */
+.derecha {
+    right: 0;
+}
+
+/* Animación de apertura */
+#overlay.abierto .izquierda {
+    transform: translateX(-100%);
+}
+
+#overlay.abierto .derecha {
+    transform: translateX(100%);
+}
+
+
+.cortina {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8e44ff, #ff007f);
+    transition: transform 1.5s ease;
+}
+
+.abrir-texto {
+    font-size: 4rem;
+    color: #ffcc00;
+    text-shadow: 4px 4px #ff1a1a;
+    animation: latido 1s infinite;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Animación cuando se abre */
+#overlay.abierto {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+/* OVERLAY COMPLETO */
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+/* Cortinas */
+.cortina {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8e44ff, #ff007f);
+    transition: transform 1.5s ease;
+}
+
+
+.izquierda {
+    left: 0;
+}
+
+.derecha {
+    right: 0;
+}
+
+/* Texto abrir */
+.abrir-contenido {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    font-size: 4rem;
+    color: #ffcc00;
+    text-shadow: 4px 4px #ff1a1a;
+    cursor: pointer;
+    animation: latido 1s infinite;
+}
+
+/* Animación cortinas abiertas */
+#overlay.abierto .izquierda {
+    transform: translateX(-100%);
+}
+
+#overlay.abierto .derecha {
+    transform: translateX(100%);
+}
+
+#overlay.abierto .abrir-contenido {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.carousel {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: #ff4dd2;
+}
+
+/* 🎠 CARRUSEL RESPONSIVE */
+
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.carousel-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 15px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Botones */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 77, 210, 0.8);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Ajuste posición en móvil */
+.prev { left: 5px; }
+.next { right: 5px; }
+
+/* 📱 Ajustes especiales para celular */
+@media (max-width: 600px) {
+
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+}
+/* 💥 MENSAJE SORPRESA */
+.mensaje-sorpresa {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff4dd2, #ff007f);
+    color: white;
+    padding: 25px 40px;
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 10000;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    display: none;
+}
+
+.mensaje-sorpresa.activo {
+    display: block;
+    opacity: 1;
+    animation: rebote 0.6s ease;
+}
+
+@keyframes rebote {
+    0% { transform: translate(-50%, -50%) scale(0.5); }
+    50% { transform: translate(-50%, -50%) scale(1.3); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}

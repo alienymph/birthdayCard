@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+<div id="mensajeSorpresa" class="mensaje-sorpresa">
+    🎉 Hoy celebro tu cumpleaños, pero también todos estos años de amistad.
+
+Gracias por estar, por apoyarme y por cada uno de los momentos que hemos compartido. De verdad te valoro mucho.
+
+Ojalá este nuevo año venga con más metas cumplidas y muchas cosas buenas para ti.
+
+Te lo mereces. 🎂🔥 🎉
+</div>
+    <div class="ocean"></div>
+
+<div class="card">
+    <h1 class="title">🎉 ¡Feliz Cumpleaños! 🎉</h1>
+    <h2 class="subtitle">30 años🧽🌊</h2>
+    <button onclick="celebrar()">¡Fiesta!</button>
+
+    <!-- 🎠 CARRUSEL -->
+<div class="carousel">
+    <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+
+    <div class="carousel-track">
+        <img src="assets/foto1.jpg" class="slide active">
+        <img src="assets/foto2.jpg" class="slide">
+        <img src="assets/foto3.jpg" class="slide">
+    </div>
+
+    <button class="next" onclick="cambiarSlide(1)">❯</button>
+</div>
+
+
+</div>
+
+
+   
+    </div>
+
+    <!-- Sonido aplausos -->
+    <audio id="musica" src="https://www.soundjay.com/human/applause-8.mp3"></audio>
+
+    <!-- 🎵 Sonido Amigos -->
+    <audio id="bobSound">
+        <source src="amigos.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Overlay -->
+    <div id="overlay">
+        <div class="cortina izquierda"></div>
+        <div class="cortina derecha"></div>
+
+        <div class="abrir-contenido" onclick="abrirTarjeta()">
+            🎁 ABRE AQUÍ 🎁
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
